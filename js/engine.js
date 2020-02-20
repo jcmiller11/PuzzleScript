@@ -1669,7 +1669,7 @@ function matchCellRow(direction, cellRowMatch, cellRow, cellRowMask, isGlobal) {
     return result;
   }
   var xmin, xmax, ymin, ymax;
-  if(isGlobal){
+  if(isGlobal || localRadius == 0){
     xmin=0;
     xmax=level.width;
     ymin=0;
