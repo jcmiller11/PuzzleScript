@@ -647,6 +647,7 @@ function setGameState(_state, command, randomseed) {
       autotick=0;
       autotickinterval=0;
     }
+    persistent_autotickinterval = autotickinterval;
 
     if (state.metadata.key_repeat_interval!==undefined) {
     repeatinterval=state.metadata.key_repeat_interval*1000;

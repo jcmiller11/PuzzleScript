@@ -45,6 +45,7 @@ function generateSpriteMatrix(dat) {
 
 var debugMode;
 var colorPalette;
+var toggle_realtime;
 
 function generateExtraMembers(state) {
 
@@ -90,6 +91,7 @@ function generateExtraMembers(state) {
 	debugMode=false;
 	verbose_logging=false;
 	throttle_movement=false;
+	toggle_realtime=false;
 	colorPalette=colorPalettes.arnecolors;
 	for (var i=0;i<state.metadata.length;i+=2){
 		var key = state.metadata[i];
@@ -111,6 +113,8 @@ function generateExtraMembers(state) {
 			cache_console_messages=true;
 		} else if (key==='throttle_movement') {
 			throttle_movement=true;
+		} else if (key==='toggle_realtime') {
+			toggle_realtime=true;
 		}
 	}
 

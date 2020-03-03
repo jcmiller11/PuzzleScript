@@ -575,7 +575,16 @@ function checkKey(e,justPressed) {
 				return prevent(e)
         	}
         	break;
-        }
+				}
+				case 81://q
+					if(toggle_realtime && justPressed){
+						if(autotickinterval == 0){
+							autotickinterval = persistent_autotickinterval;
+						} else {
+						 autotickinterval = 0;
+						}
+					}
+					break;
         case 69: {//e
         	if (canOpenEditor) {
         		if (justPressed) {
@@ -595,7 +604,7 @@ function checkKey(e,justPressed) {
         		}
         		return prevent(e);
         	}
-            break;
+						break;
 		}
 		case 48://0
 		case 49://1
